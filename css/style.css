@@ -1,0 +1,147 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* ── Nav ── */
+nav {
+  display: flex;
+  gap: 2rem;
+  padding: 1.2rem 2rem;
+  background: #1a1a1a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: #e8e8e8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/* ── Button ── */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid #e8e8e8;
+  color: #e8e8e8;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #e8e8e8;
+  color: #0f0f0f;
+}
+
+/* ── Main ── */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Project Sections ── */
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.project h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.project-goal,
+.project-design {
+  margin-bottom: 0.75rem;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.project-media img {
+  width: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* ── 3D Model Canvas ── */
+.model-canvas {
+  width: 100%;
+  height: 300px;
+  border-radius: 6px;
+  background: #1a1a1a;
+  display: block;
+}
+
+/* ── Resume Page ── */
+.resume-embed {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
