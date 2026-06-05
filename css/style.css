@@ -31,8 +31,8 @@ img {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.4rem 3rem;
+  justify-content: center;
+  padding: 1.5rem 2rem;
   position: sticky;
   top: 0;
   background: rgba(255, 255, 255, 0.92);
@@ -42,21 +42,19 @@ nav {
 }
 
 .nav-logo {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: #1a1a1a;
+  display: none;
 }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .nav-links a {
-  font-size: 0.9rem;
-  color: #555;
-  letter-spacing: 0.03em;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
   transition: color 0.2s;
 }
 
@@ -77,6 +75,10 @@ nav {
 }
 
 /* ── Hero ── */
+.hero-band {
+  background: #f0f4f8;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -182,8 +184,8 @@ nav {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 .project-card {
@@ -193,7 +195,7 @@ nav {
 
 .card-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   background: #e8edf2;
   border-radius: 6px;
   overflow: hidden;
@@ -461,6 +463,43 @@ nav {
   display: block;
 }
 
+/* ── Resume Embed ── */
+.resume-embed-wrapper {
+  margin-top: 2.5rem;
+}
+
+.resume-embed-wrapper h2 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #aaa;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.resume-embed-frame {
+  width: 100%;
+  height: 1000px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  display: block;
+  background: #fafafa;
+}
+
+.resume-embed-placeholder {
+  width: 100%;
+  height: 300px;
+  border: 1px dashed #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbb;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  background: #fafafa;
+}
+
 /* ── 3D Model Canvas ── */
 .model-canvas {
   width: 100%;
@@ -479,12 +518,6 @@ nav {
 }
 
 /* ── Responsive ── */
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 700px) {
   nav {
     padding: 1.2rem 1.5rem;

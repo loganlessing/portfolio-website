@@ -16,10 +16,10 @@ https://jacobschwartz.framer.ai/ — use this as the primary visual and structur
 ---
 
 ## Navigation
-Three items, minimal, same across all pages:
+Three items, centered and floating in the middle of the page (not spread to the edges). Make the nav text slightly larger than Jacob's — it should feel like a headline element, not a small utility bar. Same across all pages:
 
 ```
-Projects    About    Contact
+        Projects    About    Contact
 ```
 
 No resume link in the nav.
@@ -31,12 +31,14 @@ No resume link in the nav.
 ### `index.html` — Homepage
 
 **Hero section** (above the fold):
-- Left: square or rounded photo of Logan
+- Wrap the entire hero in a subtle color band (a very light tinted background — soft warm gray, pale blue, or similar — that sits behind the photo and intro text to give the section a distinct, grounded feel without being loud)
+- Left: square or rounded photo of Logan — make this large, it should feel prominent
 - Right: name, title/tagline (one strong line like "Engineer focusing on X"), 2–3 sentence bio, LinkedIn button
 
 **Project grid** (below hero):
 - Small label above the grid: "Click project photos to learn more"
-- Grid of clickable photo cards — each shows a cover photo, project title, and year
+- Grid layout: **2 columns × 3 rows** (not wider) — cards should be tall and prominent, not small thumbnails
+- Each card shows a large cover photo, project title, and year
 - Clicking a card opens its individual project page
 
 ---
@@ -65,7 +67,8 @@ Laid out as a narrative in process order, exactly like Jacob's project pages. Ea
 
 - Short bio (3–5 sentences)
 - Contact links: LinkedIn, email
-- Resume download button (links to `assets/resume.pdf`) — this is the only place the resume appears
+- Resume embedded directly in the page (like Jacob's) — render it visually so it can be read without downloading
+- Resume download button below or beside the embed (links to `assets/resume.pdf`)
 
 ---
 
@@ -96,8 +99,8 @@ portfolio-website/
 
 ## What Not to Build
 - No dark theme
-- No separate resume page
-- No embedded PDF in the page
+- No separate resume page — resume lives on the About page
 - No heavy JavaScript frameworks
 - No auto-playing video or audio
 - Do not add nav items beyond Projects, About, Contact
+- Do not spread the nav to the edges of the page — keep it centered
