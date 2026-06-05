@@ -139,15 +139,18 @@ nav {
 .hero-text .linkedin-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   font-size: 0.9rem;
-  color: #2c6e9e;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
+  font-weight: 500;
+  color: #fff;
+  background: #2c6e9e;
+  padding: 0.55rem 1.2rem;
+  border-radius: 4px;
+  transition: background 0.2s;
 }
 
 .hero-text .linkedin-link:hover {
-  border-color: #2c6e9e;
+  background: #245d87;
 }
 
 /* ── Section Headers ── */
@@ -237,7 +240,8 @@ nav {
 
 .card-meta .year {
   font-size: 0.82rem;
-  color: #aaa;
+  color: #2c6e9e;
+  font-weight: 500;
 }
 
 /* ── About Page ── */
@@ -290,7 +294,7 @@ nav {
 .resume-btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
-  background: #1a1a1a;
+  background: #2c6e9e;
   color: #fff;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -300,7 +304,7 @@ nav {
 }
 
 .resume-btn:hover {
-  background: #2c6e9e;
+  background: #245d87;
 }
 
 /* ── Project Page ── */
@@ -360,6 +364,8 @@ nav {
   color: #1a1a1a;
   letter-spacing: -0.01em;
   margin-bottom: 0.9rem;
+  padding-left: 0.85rem;
+  border-left: 3px solid #2c6e9e;
 }
 
 .project-section p {

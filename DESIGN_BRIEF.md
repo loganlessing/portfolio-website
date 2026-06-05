@@ -7,11 +7,22 @@ https://jacobschwartz.framer.ai/ — use this as the primary visual and structur
 
 ## Visual Style
 - White background, clean and minimal throughout
-- Small muted steel-blue accent color (`#2c6e9e`) used sparingly on links, tags, and hover states
+- Accent color: muted steel blue (`#2c6e9e`)
 - Generous whitespace — never crowd elements
 - System font stack, clean weights
 - Subtle scroll animations: elements fade/slide in as they enter the viewport (use Intersection Observer or AOS)
 - Subtle card hover effect (slight lift or shadow)
+
+## Color Usage
+Apply the accent color in these specific places only — nowhere else unless explicitly instructed:
+
+- **Buttons** (LinkedIn, resume download): filled accent blue with white text
+- **Tech/tools tags** on project pages: small pill badges with a light blue tint background and accent blue text
+- **Project card year label**: year displayed in accent color next to the project title on each card
+- **Nav hover**: nav items turn accent blue on hover
+- **Project page section headings (h3)**: thin 3px left border in accent color, giving each process section a structured, engineered feel
+
+All color usage should feel like punctuation — noticed when you look, not the first thing you see.
 
 ---
 
@@ -94,6 +105,11 @@ portfolio-website/
 ├── DESIGN_BRIEF.md
 └── WORKFLOW.md
 ```
+
+---
+
+## Iterative Development
+This site is built incrementally. Claude Code should **add and refine, never replace** things that are already working. If a section looks good, leave it alone unless Logan explicitly asks for a change. When in doubt, ask before touching something. Preserve all existing structure, content, and decisions unless directly instructed otherwise.
 
 ---
 
