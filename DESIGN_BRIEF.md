@@ -100,7 +100,23 @@ Laid out as a narrative in process order, exactly like Jacob's project pages. Ea
 - Short bio (3–5 sentences)
 - Contact links: LinkedIn, email
 - Resume download button (links to `assets/resume.pdf`)
-- Resume embedded directly in the page using an `<iframe>` pointing to `assets/resume.pdf` — the PDF file now exists in `assets/`. The iframe is currently commented out; uncomment it and remove the placeholder div. Make the embed **70% wide and horizontally centered** on the page (not full width). Height should be tall enough to show the full resume without internal scrolling — around 1050px. No border radius needed, keep a subtle border.
+- Resume embedded directly in the page using an `<iframe>` pointing to `assets/resume.pdf`. `assets/resume.pdf` exists. The iframe is live but broken — the problem is that `.about-page` has `max-width: 760px` which constrains the iframe. **The fix:** make `.resume-embed-wrapper` break out of that parent constraint using this exact CSS:
+  ```css
+  .resume-embed-wrapper {
+    width: 70vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+  }
+  .resume-embed-frame {
+    display: block;
+    width: 100%;
+    height: 1100px;
+    border: 1px solid #c8c8c8;
+    background: #fafafa;
+  }
+  ```
+  This makes the wrapper 70% of the viewport width and centers it relative to the viewport, not the `about-page` container. Do not move the iframe outside the `<main>` tag — just apply the CSS above.
 
 ---
 
