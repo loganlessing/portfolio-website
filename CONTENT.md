@@ -3,7 +3,7 @@
 ## Hero Section (index.html)
 
 **Tagline (one strong line):**
-Industrial & Systems Engineer — I build things, then figure out how to build them better.
+B.S.E. Industrial & Systems Engineering Student
 
 **Bio (2–3 sentences):**
 Industrial & Systems Engineering student at Oakland University, previously studying Electrical Engineering at Michigan State. At MSU Formula Racing I contributed to the design and packaging of our EV battery pack structures, working across both the mechanical and electrical accumulator, with a heavy focus on developing the process that takes a design from concept all the way through to manufactured part.

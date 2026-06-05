@@ -124,6 +124,8 @@ portfolio-website/
 ## Iterative Development
 This site is built incrementally. Claude Code should **add and refine, never replace** things that are already working. If a section looks good, leave it alone unless Logan explicitly asks for a change. When in doubt, ask before touching something. Preserve all existing structure, content, and decisions unless directly instructed otherwise.
 
+**Before starting any session:** Read DESIGN_BRIEF.md, CONTENT.md, and WORKFLOW.md in full. Then scan all project files in the `projects/` folder, all images in the `images/` folder, and `assets/` for any resume or file updates. Check for any changes across the entire project directory since the last session and implement them. When Logan asks for something to be changed, it must be fully implemented — not partially done or skipped. After completing work, confirm which files were changed and what was updated.
+
 ---
 
 ## What Not to Build
