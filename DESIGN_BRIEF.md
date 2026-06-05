@@ -99,29 +99,7 @@ Laid out as a narrative in process order, exactly like Jacob's project pages. Ea
 
 - Short bio (3–5 sentences)
 - Contact links: LinkedIn, email
-- Resume download button (links to `assets/resume.pdf`)
-- Resume rendered directly on the page using **PDF.js** — not an iframe. The iframe approach adds browser chrome and can't be sized cleanly. Use PDF.js from CDN instead.
-  - Load PDF.js from `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js`
-  - Remove any existing `<iframe>` and replace with a `<canvas id="resume-canvas">` inside `.resume-embed-wrapper`
-  - In `js/main.js` (or an inline `<script>` at the bottom of `about.html`), load `assets/resume.pdf` with PDF.js, render page 1 to the canvas at a scale that makes it fill roughly **80% of the viewport width** — calculate scale as `(window.innerWidth * 0.80) / page.getViewport({ scale: 1 }).width`
-  - The canvas should display the full resume page, clean, no browser toolbar, no scrollbar inside it
-  - Style `.resume-embed-wrapper` to break out of the `.about-page` max-width constraint:
-    ```css
-    .resume-embed-wrapper {
-      width: 80vw;
-      margin-left: 50%;
-      transform: translateX(-50%);
-      margin-top: 3rem;
-      margin-bottom: 4rem;
-    }
-    #resume-canvas {
-      display: block;
-      width: 100%;
-      height: auto;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    }
-    ```
-  - Goal: the resume should look exactly like the content is sitting on the page — full width, no chrome, readable without zooming. Reference: jacobschwartz.framer.ai/about
+- A single **Download Resume** button — styled as a filled accent blue button with white text, same style as the LinkedIn button. No resume embed, no iframe, no PDF.js. Just the button. The `assets/resume.pdf` file does not exist yet — link to it anyway so it's ready when Logan adds it later.
 
 ---
 

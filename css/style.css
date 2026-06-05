@@ -616,31 +616,6 @@ nav {
   display: block;
 }
 
-/* ── Resume Embed ── */
-.resume-embed-wrapper {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80vw;
-  margin-top: 3rem;
-  margin-bottom: 4rem;
-}
-
-.resume-embed-wrapper h2 {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #aaa;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-}
-
-#resume-canvas {
-  display: block;
-  width: 100% !important;
-  height: auto !important;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-}
 
 /* ── 3D Model Canvas ── */
 .model-canvas {
