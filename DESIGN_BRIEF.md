@@ -1,5 +1,10 @@
 # Design Brief — Logan Lessing Portfolio
 
+## Content Reference
+All bio text, tool lists, and experience context live in `CONTENT.md`. Claude Code should pull copy directly from there rather than writing placeholder text.
+
+---
+
 ## Reference Site
 https://jacobschwartz.framer.ai/ — use this as the primary visual and structural reference. Study every page before building.
 
@@ -17,14 +22,15 @@ https://jacobschwartz.framer.ai/ — use this as the primary visual and structur
 Apply the accent color in these specific places only — nowhere else unless explicitly instructed:
 
 - **Buttons** (LinkedIn, resume download): filled accent blue with white text
-- **Tech/tools tags** on project pages: small pill badges with a light blue tint background and accent blue text
+- **Tech/tools tags** on project pages: small pill badges with a light blue tint background and accent blue text — displayed immediately below the project title and year, before any body content. Below the badges, add a short italic line indicating the experience source (e.g. "Michigan State Formula Racing — Formula SAE" or "Independent Project")
+- **Tool names in body text**: when a tool is first mentioned in the project narrative, style it in accent blue inline so it pops in context
 - **Project card year label**: year displayed in accent color next to the project title on each card
 - **Nav hover**: nav items turn accent blue on hover
 - **Project page section headings (h3)**: thin 3px left border in accent color, giving each process section a structured, engineered feel
 
 - **Divider lines** (`<hr>` and section borders): use `#c8c8c8` — slightly more visible than the default but still subtle
-- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles in the hero section, positioned at the **opposite corner from the photo** (so if the photo is left, circles anchor to the bottom-right or top-right of the hero). On individual project pages, circles sit behind the project title/header area. Circles should be partially cut off by the edge — low opacity (~15–25%), z-index behind all content. Use SVG or CSS, not images.
-- **Circles are parallax-animated**: they move at a different speed than the page content as the user scrolls, giving them a floating, active feel — like they exist on a separate layer
+- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles in the hero section, positioned at the **same corner as the photo** (so if the photo is left, circles anchor to the bottom-left or top-left behind it). On individual project pages, circles sit behind the project title/header area. Circles should be partially cut off by the edge — low opacity (~15–25%), z-index behind all content. Use SVG or CSS, not images.
+- **Circles are parallax-animated**: they move at a different speed than the page content as the user scrolls. Implement using a JavaScript scroll listener with `requestAnimationFrame` and `transform: translateY()` tied to `window.scrollY` — do NOT use `background-attachment: fixed` as it is unreliable across browsers
 - **Fill blank hero space**: the hero should not feel empty. Use a combination of subtle floating geometric elements (additional faint circles, arcs, or dot grids) in the negative space around the photo and bio text. These elements should also move slightly on scroll — at varying speeds to create depth. Keep everything low opacity and secondary to the actual content — the motion fills the space without cluttering it
 
 All color usage should feel like punctuation — noticed when you look, not the first thing you see.

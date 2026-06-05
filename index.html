@@ -39,11 +39,9 @@
     </div>
     <div class="hero-text fade-up" style="transition-delay: 0.12s;">
       <h1>Logan Lessing</h1>
-      <p class="title">Industrial &amp; Systems Engineer</p>
+      <p class="title">Industrial &amp; Systems Engineer — I build things, then figure out how to build them better.</p>
       <p class="bio">
-        I design systems that make complex operations run cleaner and smarter.
-        From supply chain optimization to human factors research, I find the inefficiencies
-        that are costing time and build the processes that fix them.
+        Industrial &amp; Systems Engineering student at Oakland University, previously studying Electrical Engineering at Michigan State. At MSU Formula Racing I contributed to the design and packaging of our EV battery pack structures, working across both the mechanical and electrical accumulator, with a heavy focus on developing the process that takes a design from concept all the way through to manufactured part.
       </p>
       <a class="linkedin-link" href="https://linkedin.com/in/loganlessing" target="_blank" rel="noopener">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -151,29 +149,32 @@
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    // Parallax — hero deco elements
+    // Parallax — rAF-throttled scroll handler
     const decoEls = document.querySelectorAll('[data-speed]');
-    function updateHeroParallax() {
+    const parallaxBg = document.querySelector('.parallax-bg');
+    const projectsSection = document.querySelector('.projects-section');
+    let rafPending = false;
+
+    function runParallax() {
       const scrolled = window.scrollY;
       decoEls.forEach(el => {
         el.style.transform = `translateY(${scrolled * parseFloat(el.dataset.speed)}px)`;
       });
-    }
-    if (decoEls.length) {
-      window.addEventListener('scroll', updateHeroParallax, { passive: true });
-    }
-
-    // Parallax background on projects section
-    const parallaxBg = document.querySelector('.parallax-bg');
-    const projectsSection = document.querySelector('.projects-section');
-    if (parallaxBg && projectsSection) {
-      function updateParallax() {
+      if (parallaxBg && projectsSection) {
         const rect = projectsSection.getBoundingClientRect();
         parallaxBg.style.transform = `translateY(${rect.top * 0.25}px)`;
       }
-      window.addEventListener('scroll', updateParallax, { passive: true });
-      updateParallax();
+      rafPending = false;
     }
+
+    window.addEventListener('scroll', () => {
+      if (!rafPending) {
+        rafPending = true;
+        requestAnimationFrame(runParallax);
+      }
+    }, { passive: true });
+
+    runParallax();
   </script>
 
 </body>
