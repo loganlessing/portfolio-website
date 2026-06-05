@@ -47,6 +47,8 @@ No resume link in the nav.
 - Right: name, title/tagline (one strong line like "Engineer focusing on X"), 2–3 sentence bio, LinkedIn button
 
 **Project grid** (below hero):
+- The project grid section has a **light gray background** (`#f4f4f4` or similar) to visually separate it from the white hero above — this creates a clear two-zone layout on the homepage
+- Apply a **parallax scrolling effect** to this section so the background moves at a slightly different speed than the content as the user scrolls — gives the page depth and a sense of motion without being distracting
 - Small label above the grid: "Click project photos to learn more"
 - Grid layout: **2 columns × 3 rows** (not wider) — cards should be tall and prominent, not small thumbnails
 - Each card shows a large cover photo, project title, and year

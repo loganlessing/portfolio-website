@@ -46,6 +46,8 @@
 
   <!-- Projects -->
   <section class="projects-section" id="projects">
+    <div class="parallax-bg" aria-hidden="true"></div>
+    <div class="projects-inner">
     <p class="section-label fade-up">Click project photos to learn more</p>
 
     <div class="project-grid">
@@ -123,6 +125,7 @@
       </a>
 
     </div>
+    </div>
   </section>
 
   <script>
@@ -136,6 +139,18 @@
     }, { threshold: 0.08 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Parallax background on projects section
+    const parallaxBg = document.querySelector('.parallax-bg');
+    const projectsSection = document.querySelector('.projects-section');
+    if (parallaxBg && projectsSection) {
+      function updateParallax() {
+        const rect = projectsSection.getBoundingClientRect();
+        parallaxBg.style.transform = `translateY(${rect.top * 0.25}px)`;
+      }
+      window.addEventListener('scroll', updateParallax, { passive: true });
+      updateParallax();
+    }
   </script>
 
 </body>
