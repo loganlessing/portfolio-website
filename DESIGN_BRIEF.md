@@ -23,7 +23,9 @@ Apply the accent color in these specific places only — nowhere else unless exp
 - **Project page section headings (h3)**: thin 3px left border in accent color, giving each process section a structured, engineered feel
 
 - **Divider lines** (`<hr>` and section borders): use `#c8c8c8` — slightly more visible than the default but still subtle
-- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles placed behind Logan's photo in the hero section, and behind the title/header area on individual project pages. Circles should be partially cut off by the edge or the photo — they sit in the background (z-index behind content), low opacity (~15–25%), and feel like a design element rather than a graphic. Use SVG or CSS for this, not images.
+- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles in the hero section, positioned at the **opposite corner from the photo** (so if the photo is left, circles anchor to the bottom-right or top-right of the hero). On individual project pages, circles sit behind the project title/header area. Circles should be partially cut off by the edge — low opacity (~15–25%), z-index behind all content. Use SVG or CSS, not images.
+- **Circles are parallax-animated**: they move at a different speed than the page content as the user scrolls, giving them a floating, active feel — like they exist on a separate layer
+- **Fill blank hero space**: the hero should not feel empty. Use a combination of subtle floating geometric elements (additional faint circles, arcs, or dot grids) in the negative space around the photo and bio text. These elements should also move slightly on scroll — at varying speeds to create depth. Keep everything low opacity and secondary to the actual content — the motion fills the space without cluttering it
 
 All color usage should feel like punctuation — noticed when you look, not the first thing you see.
 

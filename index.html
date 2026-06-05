@@ -19,13 +19,17 @@
 
   <!-- Hero -->
   <div class="hero-band">
+    <div class="hero-deco" aria-hidden="true">
+      <span class="hd-c1" data-speed="-0.12"></span>
+      <span class="hd-c2" data-speed="-0.08"></span>
+      <span class="hd-c3" data-speed="-0.18"></span>
+      <span class="hd-c4" data-speed="-0.06"></span>
+      <span class="hd-c5" data-speed="-0.10"></span>
+      <span class="hd-c6" data-speed="-0.14"></span>
+      <div class="hd-dots" data-speed="-0.07"></div>
+    </div>
   <section class="hero">
     <div class="hero-photo-wrap fade-up">
-      <div class="deco-circles" aria-hidden="true">
-        <span class="circle circle-1"></span>
-        <span class="circle circle-2"></span>
-        <span class="circle circle-3"></span>
-      </div>
       <div class="hero-photo">
         <!-- Replace src with your actual photo, e.g. images/profile.jpg -->
         <img src="images/profile.jpg" alt="Logan Lessing"
@@ -146,6 +150,18 @@
     }, { threshold: 0.08 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Parallax — hero deco elements
+    const decoEls = document.querySelectorAll('[data-speed]');
+    function updateHeroParallax() {
+      const scrolled = window.scrollY;
+      decoEls.forEach(el => {
+        el.style.transform = `translateY(${scrolled * parseFloat(el.dataset.speed)}px)`;
+      });
+    }
+    if (decoEls.length) {
+      window.addEventListener('scroll', updateHeroParallax, { passive: true });
+    }
 
     // Parallax background on projects section
     const parallaxBg = document.querySelector('.parallax-bg');

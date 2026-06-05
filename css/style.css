@@ -95,10 +95,72 @@ nav {
 
 /* ── Hero ── */
 .hero-band {
+  position: relative;
+  overflow: hidden;
   background: #f0f4f8;
 }
 
+.hero-deco {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Main cluster — top-right, opposite from photo */
+.hd-c1 {
+  position: absolute;
+  width: 420px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.11;
+  top: -18%; right: -8%;
+}
+.hd-c2 {
+  position: absolute;
+  width: 290px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.09;
+  top: 12%; right: 6%;
+}
+.hd-c3 {
+  position: absolute;
+  width: 175px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.17;
+  top: 2%; right: 22%;
+}
+
+/* Fill elements — bottom-left and midfield */
+.hd-c4 {
+  position: absolute;
+  width: 130px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.07;
+  bottom: 8%; left: 3%;
+}
+.hd-c5 {
+  position: absolute;
+  width: 70px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.10;
+  top: 55%; left: 42%;
+}
+.hd-c6 {
+  position: absolute;
+  width: 55px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.08;
+  top: 20%; left: 50%;
+}
+
+/* Dot grid fill */
+.hd-dots {
+  position: absolute;
+  width: 220px; height: 180px;
+  bottom: 12%; right: 4%;
+  background-image: radial-gradient(circle, rgba(44,110,158,0.28) 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  opacity: 0.55;
+}
+
 .hero {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 4rem;
@@ -110,13 +172,6 @@ nav {
 
 .hero-photo-wrap {
   position: relative;
-}
-
-.hero-photo-wrap > .deco-circles {
-  top: -8%;
-  left: -12%;
-  width: 124%;
-  height: 116%;
 }
 
 .hero-photo {
