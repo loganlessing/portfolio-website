@@ -29,9 +29,9 @@ Apply the accent color in these specific places only — nowhere else unless exp
 - **Project page section headings (h3)**: thin 3px left border in accent color, giving each process section a structured, engineered feel
 
 - **Divider lines** (`<hr>` and section borders): use `#c8c8c8` — slightly more visible than the default but still subtle
-- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles in the hero section, positioned at the **same corner as the photo** (so if the photo is left, circles anchor to the bottom-left or top-left behind it). On individual project pages, circles sit behind the project title/header area. Circles should be partially cut off by the edge — low opacity (~15–25%), z-index behind all content. Use SVG or CSS, not images.
-- **Circles are parallax-animated**: they move at a different speed than the page content as the user scrolls. Implement using a JavaScript scroll listener with `requestAnimationFrame` and `transform: translateY()` tied to `window.scrollY` — do NOT use `background-attachment: fixed` as it is unreliable across browsers
-- **Fill blank hero space**: the hero should not feel empty. Use a combination of subtle floating geometric elements (additional faint circles, arcs, or dot grids) in the negative space around the photo and bio text. These elements should also move slightly on scroll — at varying speeds to create depth. Keep everything low opacity and secondary to the actual content — the motion fills the space without cluttering it
+- **Decorative overlapping circles**: Translucent steel-blue circles distributed across the full width of the hero section — not clustered only on the left. Aim for balanced visual weight: 2–3 larger circles anchored behind/around the photo on the left, and 2–3 medium/smaller circles on the right side of the hero. Circles should be partially cut off by the edge — low opacity (~10–20%), z-index behind all content. Use CSS, not images.
+- **Circles are parallax-animated**: Each circle must move at a noticeably different scroll speed. Use a JS scroll listener with `requestAnimationFrame` and `transform: translateY()` tied to `window.scrollY`. Assign `data-speed` values with a wide spread — for example: large circles slow (-0.08 to -0.12), medium circles mid (-0.18 to -0.24), small circles fast (-0.32 to -0.42). The speed difference should be clearly visible — not subtle. Do NOT use `background-attachment: fixed`.
+- **Fill blank hero space**: the hero should not feel empty. Use a combination of subtle floating geometric elements (additional faint circles, arcs, or dot grids) in the negative space around the photo and bio text. These also move on scroll at their own distinct speeds. Keep everything low opacity and secondary to the actual content — the motion fills the space without cluttering it.
 
 All color usage should feel like punctuation — noticed when you look, not the first thing you see.
 
@@ -91,8 +91,8 @@ Laid out as a narrative in process order, exactly like Jacob's project pages. Ea
 
 - Short bio (3–5 sentences)
 - Contact links: LinkedIn, email
-- Resume embedded directly in the page (like Jacob's) — render it visually so it can be read without downloading
-- Resume download button below or beside the embed (links to `assets/resume.pdf`)
+- Resume download button (links to `assets/resume.pdf`)
+- Resume embedded directly in the page using an `<iframe>` pointing to `assets/resume.pdf` — the PDF file now exists in `assets/`. The iframe is currently commented out; uncomment it and remove the placeholder div. Make the embed **70% wide and horizontally centered** on the page (not full width). Height should be tall enough to show the full resume without internal scrolling — around 1050px. No border radius needed, keep a subtle border.
 
 ---
 

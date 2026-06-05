@@ -113,54 +113,56 @@ nav {
   overflow: hidden;
 }
 
-/* Main cluster — top-left, same corner as photo */
+/* Large circles — left side, behind/around photo (slow parallax) */
 .hd-c1 {
   position: absolute;
   width: 420px; aspect-ratio: 1; border-radius: 50%;
-  background: #2c6e9e; opacity: 0.11;
-  top: -18%; left: -8%;
+  background: #2c6e9e; opacity: 0.10;
+  top: -20%; left: -10%;
 }
 .hd-c2 {
   position: absolute;
-  width: 290px; aspect-ratio: 1; border-radius: 50%;
-  background: #2c6e9e; opacity: 0.09;
-  top: 12%; left: 6%;
-}
-.hd-c3 {
-  position: absolute;
-  width: 175px; aspect-ratio: 1; border-radius: 50%;
-  background: #2c6e9e; opacity: 0.17;
-  top: 2%; left: 22%;
+  width: 320px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.08;
+  bottom: -15%; left: 2%;
 }
 
-/* Fill elements — bottom-right and midfield */
+/* Medium circles — midfield and right side */
+.hd-c3 {
+  position: absolute;
+  width: 210px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.12;
+  top: 8%; left: 20%;
+}
 .hd-c4 {
   position: absolute;
-  width: 130px; aspect-ratio: 1; border-radius: 50%;
-  background: #2c6e9e; opacity: 0.07;
-  bottom: 8%; right: 3%;
+  width: 170px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.09;
+  top: -12%; right: -4%;
 }
 .hd-c5 {
   position: absolute;
-  width: 70px; aspect-ratio: 1; border-radius: 50%;
+  width: 140px; aspect-ratio: 1; border-radius: 50%;
   background: #2c6e9e; opacity: 0.10;
-  top: 55%; right: 42%;
-}
-.hd-c6 {
-  position: absolute;
-  width: 55px; aspect-ratio: 1; border-radius: 50%;
-  background: #2c6e9e; opacity: 0.08;
-  top: 20%; right: 50%;
+  bottom: 5%; right: 8%;
 }
 
-/* Dot grid fill */
+/* Small circles — fast parallax */
+.hd-c6 {
+  position: absolute;
+  width: 75px; aspect-ratio: 1; border-radius: 50%;
+  background: #2c6e9e; opacity: 0.13;
+  top: 40%; right: 22%;
+}
+
+/* Dot grid fill — right midfield */
 .hd-dots {
   position: absolute;
-  width: 220px; height: 180px;
-  bottom: 12%; right: 4%;
+  width: 200px; height: 160px;
+  top: 55%; right: 12%;
   background-image: radial-gradient(circle, rgba(44,110,158,0.28) 1.5px, transparent 1.5px);
   background-size: 18px 18px;
-  opacity: 0.55;
+  opacity: 0.50;
 }
 
 .hero {
@@ -629,25 +631,11 @@ nav {
 }
 
 .resume-embed-frame {
-  width: 100%;
-  height: 1000px;
-  border: 1px solid #e8e8e8;
-  border-radius: 6px;
   display: block;
-  background: #fafafa;
-}
-
-.resume-embed-placeholder {
-  width: 100%;
-  height: 300px;
-  border: 1px dashed #ccc;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #bbb;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
+  width: 70%;
+  height: 1050px;
+  margin: 0 auto;
+  border: 1px solid #c8c8c8;
   background: #fafafa;
 }
 
