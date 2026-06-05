@@ -100,23 +100,28 @@ Laid out as a narrative in process order, exactly like Jacob's project pages. Ea
 - Short bio (3–5 sentences)
 - Contact links: LinkedIn, email
 - Resume download button (links to `assets/resume.pdf`)
-- Resume embedded directly in the page using an `<iframe>` pointing to `assets/resume.pdf`. `assets/resume.pdf` exists. The iframe is live but broken — the problem is that `.about-page` has `max-width: 760px` which constrains the iframe. **The fix:** make `.resume-embed-wrapper` break out of that parent constraint using this exact CSS:
-  ```css
-  .resume-embed-wrapper {
-    width: 70vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: 3rem;
-  }
-  .resume-embed-frame {
-    display: block;
-    width: 100%;
-    height: 1100px;
-    border: 1px solid #c8c8c8;
-    background: #fafafa;
-  }
-  ```
-  This makes the wrapper 70% of the viewport width and centers it relative to the viewport, not the `about-page` container. Do not move the iframe outside the `<main>` tag — just apply the CSS above.
+- Resume rendered directly on the page using **PDF.js** — not an iframe. The iframe approach adds browser chrome and can't be sized cleanly. Use PDF.js from CDN instead.
+  - Load PDF.js from `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js`
+  - Remove any existing `<iframe>` and replace with a `<canvas id="resume-canvas">` inside `.resume-embed-wrapper`
+  - In `js/main.js` (or an inline `<script>` at the bottom of `about.html`), load `assets/resume.pdf` with PDF.js, render page 1 to the canvas at a scale that makes it fill roughly **80% of the viewport width** — calculate scale as `(window.innerWidth * 0.80) / page.getViewport({ scale: 1 }).width`
+  - The canvas should display the full resume page, clean, no browser toolbar, no scrollbar inside it
+  - Style `.resume-embed-wrapper` to break out of the `.about-page` max-width constraint:
+    ```css
+    .resume-embed-wrapper {
+      width: 80vw;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    #resume-canvas {
+      display: block;
+      width: 100%;
+      height: auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    ```
+  - Goal: the resume should look exactly like the content is sitting on the page — full width, no chrome, readable without zooming. Reference: jacobschwartz.framer.ai/about
 
 ---
 

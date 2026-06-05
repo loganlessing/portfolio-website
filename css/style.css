@@ -618,10 +618,11 @@ nav {
 
 /* ── Resume Embed ── */
 .resume-embed-wrapper {
-  width: 70vw;
+  width: 80vw;
   margin-left: 50%;
   transform: translateX(-50%);
   margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .resume-embed-wrapper h2 {
@@ -633,12 +634,11 @@ nav {
   margin-bottom: 1.25rem;
 }
 
-.resume-embed-frame {
+#resume-canvas {
   display: block;
   width: 100%;
-  height: 1100px;
-  border: 1px solid #c8c8c8;
-  background: #fafafa;
+  height: auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
 /* ── 3D Model Canvas ── */
