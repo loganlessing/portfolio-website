@@ -21,7 +21,7 @@ On the technical side I work primarily in NX CAD/CAM, Fusion 360, and ANSYS for 
 
 **Contact:**
 - Email: loganlessing@gmail.com
-- LinkedIn: linkedin.com/in/Logan-Lessing
+- LinkedIn: https://www.linkedin.com/in/logan-lessing-3ab7203a5
 - Resume download: assets/resume.pdf
 
 ---

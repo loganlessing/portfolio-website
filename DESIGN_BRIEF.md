@@ -30,7 +30,15 @@ Apply the accent color in these specific places only — nowhere else unless exp
 
 - **Divider lines** (`<hr>` and section borders): use `#c8c8c8` — slightly more visible than the default but still subtle
 - **Decorative overlapping circles**: Translucent steel-blue circles distributed across the full width of the hero section — not clustered only on the left. Aim for balanced visual weight: 2–3 larger circles anchored behind/around the photo on the left, and 2–3 medium/smaller circles on the right side of the hero. Circles should be partially cut off by the edge — low opacity (~10–20%), z-index behind all content. Use CSS, not images.
-- **Circles are parallax-animated**: Each circle must move at a noticeably different scroll speed. Use a JS scroll listener with `requestAnimationFrame` and `transform: translateY()` tied to `window.scrollY`. Assign `data-speed` values with a wide spread — for example: large circles slow (-0.08 to -0.12), medium circles mid (-0.18 to -0.24), small circles fast (-0.32 to -0.42). The speed difference should be clearly visible — not subtle. Do NOT use `background-attachment: fixed`.
+- **Circles are parallax-animated**: Each circle must move at a noticeably different scroll speed. Use a JS scroll listener with `requestAnimationFrame` and `transform: translateY()` tied to `window.scrollY`. Do NOT use `background-attachment: fixed`. Assign `data-speed` values as follows — these are 2.5–3x the original values, randomised per element to create clear depth separation:
+  - `hd-c1`: `-0.62`
+  - `hd-c2`: `-0.45`
+  - `hd-c3`: `-0.95`
+  - `hd-c4`: `-0.32`
+  - `hd-c5`: `-0.55`
+  - `hd-c6`: `-0.78`
+  - `hd-dots`: `-0.38`
+  The difference between fastest and slowest should be clearly visible as you scroll — not subtle.
 - **Fill blank hero space**: the hero should not feel empty. Use a combination of subtle floating geometric elements (additional faint circles, arcs, or dot grids) in the negative space around the photo and bio text. These also move on scroll at their own distinct speeds. Keep everything low opacity and secondary to the actual content — the motion fills the space without cluttering it.
 
 All color usage should feel like punctuation — noticed when you look, not the first thing you see.
