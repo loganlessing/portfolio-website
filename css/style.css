@@ -38,7 +38,7 @@ nav {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   z-index: 100;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #c8c8c8;
 }
 
 .nav-logo {
@@ -61,6 +61,25 @@ nav {
 .nav-links a:hover {
   color: #2c6e9e;
 }
+
+/* ── Decorative Circles ── */
+.deco-circles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.deco-circles .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: #2c6e9e;
+}
+
+.deco-circles .circle-1 { width: 72%; aspect-ratio: 1; opacity: 0.15; top: -8%; left: -12%; }
+.deco-circles .circle-2 { width: 55%; aspect-ratio: 1; opacity: 0.12; top: 28%; left: 22%; }
+.deco-circles .circle-3 { width: 38%; aspect-ratio: 1; opacity: 0.20; top: -14%; left: 38%; }
 
 /* ── Scroll Fade-In ── */
 .fade-up {
@@ -89,7 +108,20 @@ nav {
   padding: 8rem 3rem 7rem;
 }
 
+.hero-photo-wrap {
+  position: relative;
+}
+
+.hero-photo-wrap > .deco-circles {
+  top: -8%;
+  left: -12%;
+  width: 124%;
+  height: 116%;
+}
+
 .hero-photo {
+  position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 3 / 4;
   background: #e8edf2;
@@ -351,7 +383,23 @@ nav {
 }
 
 .project-header {
+  position: relative;
   margin-bottom: 4rem;
+  padding-left: 0;
+  overflow: visible;
+}
+
+.project-header > .deco-circles {
+  top: -60%;
+  left: -6%;
+  width: 60%;
+  height: 280%;
+}
+
+.project-header h1,
+.project-header .year {
+  position: relative;
+  z-index: 1;
 }
 
 .project-header h1 {
@@ -541,7 +589,7 @@ nav {
 /* ── Divider ── */
 .divider {
   border: none;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #c8c8c8;
   margin: 4rem 0;
 }
 

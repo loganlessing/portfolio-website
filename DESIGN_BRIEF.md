@@ -22,6 +22,9 @@ Apply the accent color in these specific places only — nowhere else unless exp
 - **Nav hover**: nav items turn accent blue on hover
 - **Project page section headings (h3)**: thin 3px left border in accent color, giving each process section a structured, engineered feel
 
+- **Divider lines** (`<hr>` and section borders): use `#c8c8c8` — slightly more visible than the default but still subtle
+- **Decorative overlapping circles**: a cluster of 2–3 overlapping translucent steel-blue circles placed behind Logan's photo in the hero section, and behind the title/header area on individual project pages. Circles should be partially cut off by the edge or the photo — they sit in the background (z-index behind content), low opacity (~15–25%), and feel like a design element rather than a graphic. Use SVG or CSS for this, not images.
+
 All color usage should feel like punctuation — noticed when you look, not the first thing you see.
 
 ---
