@@ -618,9 +618,10 @@ nav {
 
 /* ── Resume Embed ── */
 .resume-embed-wrapper {
-  width: 80vw;
-  margin-left: 50%;
+  position: relative;
+  left: 50%;
   transform: translateX(-50%);
+  width: 80vw;
   margin-top: 3rem;
   margin-bottom: 4rem;
 }
@@ -636,8 +637,8 @@ nav {
 
 #resume-canvas {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
 }
 
