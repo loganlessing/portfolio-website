@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supply Chain Optimization — Logan Lessing</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">Logan Lessing</a>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../about.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <article class="project-page">
+
+    <a class="back-link fade-up" href="../index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      All Projects
+    </a>
+
+    <header class="project-header fade-up" style="transition-delay: 0.06s;">
+      <h1>Supply Chain Optimization</h1>
+      <p class="year">2024</p>
+    </header>
+
+    <!-- Cover image -->
+    <div class="project-image fade-up" style="transition-delay: 0.1s;">
+      <img src="../images/supply-chain/cover.jpg" alt="Supply Chain Optimization"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="placeholder-label">Cover image — replace with images/supply-chain/cover.jpg</span>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Problem -->
+    <section class="project-section fade-up">
+      <h2>Problem</h2>
+      <p>
+        A regional distribution company was experiencing significant lead time variability
+        and excess inventory holding costs due to misaligned ordering policies across
+        their supplier network. The lack of visibility between tiers created cascading
+        delays that compounded at the point of fulfillment.
+      </p>
+      <p>
+        The goal was to identify the root causes driving variability and redesign the
+        ordering and replenishment policies to reduce total cost while maintaining
+        service level targets.
+      </p>
+    </section>
+
+    <!-- Process -->
+    <section class="project-section fade-up">
+      <h2>Process</h2>
+      <p>
+        I began with a demand data audit across 18 months of transaction records, mapping
+        the variance patterns by SKU category and supplier. This revealed a clear bullwhip
+        effect — small demand fluctuations at retail were amplified 3–4x by the time
+        orders reached Tier 2 suppliers.
+      </p>
+
+      <div class="project-image fade-up">
+        <img src="../images/supply-chain/photo-1.jpg" alt="Demand analysis chart"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="placeholder-label">Process image — replace with images/supply-chain/photo-1.jpg</span>
+      </div>
+      <p class="image-caption">Demand variance mapped across supplier tiers, showing amplification pattern</p>
+
+      <p>
+        I built a simulation model in Arena to test alternative replenishment policies —
+        comparing periodic review, continuous review, and a hybrid vendor-managed inventory
+        approach. Scenarios were run against historical demand distributions with Monte
+        Carlo sampling to stress-test edge cases.
+      </p>
+
+      <div class="project-image fade-up">
+        <img src="../images/supply-chain/photo-2.jpg" alt="Simulation model"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span class="placeholder-label">Process image — replace with images/supply-chain/photo-2.jpg</span>
+      </div>
+      <p class="image-caption">Arena simulation model showing material flow between nodes</p>
+    </section>
+
+    <!-- Outcome -->
+    <section class="project-section fade-up">
+      <h2>Outcome</h2>
+      <p>
+        The recommended hybrid VMI policy reduced average inventory holding cost by 22%
+        while improving on-time delivery rates from 87% to 94%. The simulation output
+        also identified two supplier relationships that were structural bottlenecks —
+        flagged for renegotiation in the following procurement cycle.
+      </p>
+      <p>
+        The client implemented the new policy across their top 40 SKUs in Q3, with full
+        network rollout planned for the following year.
+      </p>
+    </section>
+
+    <!-- Tags -->
+    <section class="project-section fade-up">
+      <h2>Tools &amp; Methods</h2>
+      <div class="tags">
+        <span class="tag">Discrete-Event Simulation</span>
+        <span class="tag">Arena</span>
+        <span class="tag">Inventory Optimization</span>
+        <span class="tag">Excel / VBA</span>
+        <span class="tag">Monte Carlo</span>
+        <span class="tag">Demand Analysis</span>
+      </div>
+    </section>
+
+  </article>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

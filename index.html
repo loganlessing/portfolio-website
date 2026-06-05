@@ -9,17 +9,132 @@
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="resume.html">Resume</a>
+    <a class="nav-logo" href="index.html">Logan Lessing</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
+    </div>
   </nav>
 
-  <main class="hero">
-    <h1>Logan Lessing</h1>
-    <p>Industrial & Systems Engineer</p>
-    <a href="portfolio.html" class="btn">View My Work</a>
-  </main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-photo fade-up">
+      <!-- Replace src with your actual photo, e.g. images/profile.jpg -->
+      <img src="images/profile.jpg" alt="Logan Lessing"
+           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+      <span class="placeholder-label">Photo coming soon</span>
+    </div>
+    <div class="hero-text fade-up" style="transition-delay: 0.12s;">
+      <h1>Logan Lessing</h1>
+      <p class="title">Industrial &amp; Systems Engineer</p>
+      <p class="bio">
+        I design systems that make complex operations run cleaner and smarter.
+        From supply chain optimization to human factors research, I find the inefficiencies
+        that are costing time and build the processes that fix them.
+      </p>
+      <a class="linkedin-link" href="https://linkedin.com/in/loganlessing" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
+        </svg>
+        LinkedIn
+      </a>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
+  <!-- Projects -->
+  <section class="projects-section" id="projects">
+    <p class="section-label fade-up">Selected Work</p>
+
+    <div class="project-grid">
+
+      <a class="project-card fade-up" href="projects/supply-chain-optimization.html">
+        <div class="card-image">
+          <img src="images/supply-chain/cover.jpg" alt="Supply Chain Optimization"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Supply Chain Optimization</h3>
+          <span class="year">2024</span>
+        </div>
+      </a>
+
+      <a class="project-card fade-up" href="projects/facility-layout.html" style="transition-delay: 0.08s;">
+        <div class="card-image">
+          <img src="images/facility-layout/cover.jpg" alt="Facility Layout Redesign"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Facility Layout Redesign</h3>
+          <span class="year">2024</span>
+        </div>
+      </a>
+
+      <a class="project-card fade-up" href="projects/human-factors.html" style="transition-delay: 0.16s;">
+        <div class="card-image">
+          <img src="images/human-factors/cover.jpg" alt="Human Factors Research"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Human Factors Research</h3>
+          <span class="year">2023</span>
+        </div>
+      </a>
+
+      <a class="project-card fade-up" href="projects/process-improvement.html">
+        <div class="card-image">
+          <img src="images/process-improvement/cover.jpg" alt="Process Improvement"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Process Improvement Initiative</h3>
+          <span class="year">2023</span>
+        </div>
+      </a>
+
+      <a class="project-card fade-up" href="projects/simulation-model.html" style="transition-delay: 0.08s;">
+        <div class="card-image">
+          <img src="images/simulation-model/cover.jpg" alt="Simulation Model"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Discrete-Event Simulation</h3>
+          <span class="year">2023</span>
+        </div>
+      </a>
+
+      <a class="project-card fade-up" href="projects/ergonomics-study.html" style="transition-delay: 0.16s;">
+        <div class="card-image">
+          <img src="images/ergonomics-study/cover.jpg" alt="Ergonomics Study"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="placeholder-label">Project Image</span>
+        </div>
+        <div class="card-meta">
+          <h3>Ergonomics &amp; Workstation Study</h3>
+          <span class="year">2022</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
 </body>
 </html>
