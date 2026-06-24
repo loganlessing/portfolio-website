@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ============================================================
+  REUSABLE PROJECT DETAIL TEMPLATE
+  ------------------------------------------------------------
+  To create a new project page:
+    1. Copy this file to projects/<slug>.html
+    2. Replace the [[ ... ]] marked content below
+    3. Drop images in images/<slug>/ (hero.jpg, 01.jpg … 05.jpg)
+    4. Update the "Next Project" link in the footer
+  Sample content shown is the design-handoff reference:
+  "EV Battery Pack Structure Design".
+  ============================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- [[ PAGE TITLE ]] -->
+  <title>EV Battery Pack Structure Design — Logan Lessing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Nav ── -->
+  <nav class="site-nav">
+    <a class="nav-back" href="../index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9 2L4 7l5 5" stroke="#1c1917" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>Portfolio</span>
+    </a>
+    <span class="nav-wordmark-right">Logan Lessing</span>
+  </nav>
+
+  <!-- ── Hero banner ── -->
+  <!-- [[ HERO IMAGE: images/<slug>/hero.jpg ]] -->
+  <div class="project-hero">
+    <img src="../images/battery-pack/hero.jpg" alt="" onerror="this.style.display='none';">
+    <div class="overlay"></div>
+  </div>
+
+  <!-- ── Content ── -->
+  <div class="project-content">
+
+    <!-- [[ CONTEXT CRUMB ]] -->
+    <div class="project-crumb">Formula SAE · MSU Formula Racing</div>
+
+    <!-- [[ TITLE — second line in <em> for italic gold ]] -->
+    <h1>EV Battery Pack<br><em>Structure Design</em></h1>
+
+    <!-- [[ YEAR ]] -->
+    <div class="project-year">2023 – 2024</div>
+
+    <!-- [[ TOOL BADGES ]] -->
+    <div class="tool-badges">
+      <span class="tool-badge">NX CAD/CAM</span>
+      <span class="tool-badge">ANSYS FEA</span>
+      <span class="tool-badge">Fusion 360</span>
+      <span class="tool-badge">GitHub</span>
+      <span class="tool-badge">C++</span>
+    </div>
+
+    <div class="accent-rule"></div>
+
+    <!-- [[ OVERVIEW ]] -->
+    <div class="project-block reveal">
+      <div class="block-label">Overview</div>
+      <p class="block-lead">At MSU Formula Racing I was responsible for the design and packaging of the EV battery pack structure — a core component of the car that sits at the intersection of mechanical integrity, electrical safety, and manufacturing reality. The project ran from initial concept through to manufactured and validated parts, giving me end-to-end ownership of a safety-critical system.</p>
+    </div>
+
+    <!-- [[ THE CHALLENGE ]] -->
+    <div class="project-block reveal">
+      <div class="block-label">The Challenge</div>
+      <h2>Packaging a high-voltage accumulator into a race car chassis — safely, lightly, and within a tight timeline.</h2>
+      <p>Formula SAE rules impose strict requirements on accumulator containment structures, deformation zones, and electrical isolation. At the same time, every gram of structure weight directly hurts lap time. The challenge was designing a structure that passed all regulatory requirements while being manufacturable by a student team with limited tooling.</p>
+    </div>
+
+    <!-- [[ PROCESS — numbered steps; wrap tool names in <strong> ]] -->
+    <div class="project-block reveal">
+      <div class="block-label">Process</div>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Concept &amp; Packaging</div>
+            <p>Worked through multiple packaging layouts in <strong>NX CAD</strong> to determine how the cell modules, BMS, and cooling system could fit within the chassis envelope while keeping the center of gravity low.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Structural Analysis</div>
+            <p>Used <strong>ANSYS FEA</strong> to validate the enclosure against SAE-defined impact load cases. Iterated on wall thickness, gusset placement, and material selection until all cases passed with an acceptable safety factor.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">DFM &amp; Manufacturing</div>
+            <p>Adapted designs in <strong>Fusion 360</strong> for student-team fabrication — waterjet cutting, bending, and TIG welding. Documented the full process in a manufacturing package tracked via <strong>GitHub</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Gallery ── -->
+  <!-- [[ GALLERY: images/<slug>/01–05.jpg ]] -->
+  <div class="gallery-wrap">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="../images/battery-pack/01.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+      <div class="gallery-item">
+        <img src="../images/battery-pack/02.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+      <div class="gallery-item">
+        <img src="../images/battery-pack/03.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+      <div class="gallery-item wide">
+        <img src="../images/battery-pack/04.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+      <div class="gallery-item">
+        <img src="../images/battery-pack/05.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Results ── -->
+  <!-- [[ RESULTS ]] -->
+  <div class="results-wrap">
+    <div class="project-block reveal" style="margin-bottom:0;">
+      <div class="block-label">Results</div>
+      <h2>Passed all SAE structural requirements. Part manufactured and installed in the 2024 competition vehicle.</h2>
+      <p>The final design cleared all required load cases in FEA with a minimum safety factor of 2.1 across the governing scenarios. Weight came in under target, and the manufacturing package was completed on schedule — the structure was fabricated in-house and installed in the 2024 FSAE EV competition car.</p>
+      <p>More than the technical outcome, the project built my understanding of how to take full ownership of a system — from requirements and constraints through to a part in your hands — and how to communicate design decisions clearly across mechanical, electrical, and manufacturing stakeholders.</p>
+    </div>
+  </div>
+
+  <!-- ── Footer / Next Project ── -->
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a class="footer-back" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9 2L4 7l5 5" stroke="#c8a882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span>All Projects</span>
+      </a>
+      <div class="footer-next">
+        <div class="next-label">Next Project</div>
+        <!-- [[ NEXT PROJECT LINK ]] -->
+        <a href="supply-chain-optimization.html">
+          Supply Chain Optimization
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/portfolio.js"></script>
+</body>
+</html>

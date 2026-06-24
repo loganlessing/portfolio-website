@@ -3,170 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logan Lessing</title>
+  <title>Logan Lessing — Industrial &amp; Systems Engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="index.html">Logan Lessing</a>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Nav ── -->
+  <nav class="site-nav">
+    <div class="nav-brand">
+      <span class="wordmark">Logan Lessing</span>
+      <span class="subtitle">Industrial &amp; Systems Engineering</span>
+    </div>
     <div class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="about.html">About</a>
-      <a href="about.html#contact">Contact</a>
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="mailto:loganlessing@gmail.com">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <div class="hero-band">
+  <!-- ── Hero ── -->
   <section class="hero">
-    <div class="hero-photo-wrap fade-up">
-      <div class="hero-photo">
-        <!-- Replace src with your actual photo, e.g. images/profile.jpg -->
-        <img src="images/profile.jpg" alt="Logan Lessing"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="placeholder-label">Photo coming soon</span>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo" data-parallax>
+        <img src="images/profile.jpg" alt="Logan Lessing" onerror="this.style.display='none';">
+        <div class="photo-placeholder">
+          <div class="dot"></div>
+          <span>Profile photo</span>
+        </div>
       </div>
     </div>
-    <div class="hero-text fade-up" style="transition-delay: 0.12s;">
-      <h1>Logan Lessing</h1>
-      <p class="title">B.S.E. Industrial &amp; Systems Engineering Student</p>
-      <p class="bio">
-        Industrial &amp; Systems Engineering student at Oakland University, previously studying Electrical Engineering at Michigan State. At MSU Formula Racing I contributed to the design and packaging of our EV battery pack structures, working across both the mechanical and electrical accumulator, with a heavy focus on developing the process that takes a design from concept all the way through to manufactured part.
-      </p>
-      <a class="linkedin-link" href="https://www.linkedin.com/in/logan-lessing-3ab7203a5" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/>
-        </svg>
-        LinkedIn
-      </a>
+
+    <div class="hero-text">
+      <div class="hero-eyebrow">B.S.E. Industrial &amp; Systems Engineering</div>
+      <h1>Logan<br>Lessing</h1>
+      <p class="bio">Industrial &amp; Systems Engineering student at Oakland University, previously studying Electrical Engineering at Michigan State. At MSU Formula Racing I contributed to the design and packaging of our EV battery pack structures — developing the process from concept all the way through to manufactured part.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://www.linkedin.com/in/logan-lessing-3ab7203a5" target="_blank" rel="noopener">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"></path></svg>
+          LinkedIn
+        </a>
+        <a class="btn-text" href="#projects">View Work</a>
+      </div>
     </div>
   </section>
+
+  <!-- ── Accent rule ── -->
+  <div class="wrap">
+    <div class="accent-rule"></div>
   </div>
 
-  <!-- Projects -->
-  <section class="projects-section" id="projects">
-    <div class="parallax-bg" aria-hidden="true"></div>
-    <div class="projects-inner">
-    <p class="section-label fade-up">Click project photos to learn more</p>
+  <!-- ── Projects ── -->
+  <section id="projects" class="projects">
+    <div class="section-label reveal">Selected Work</div>
 
     <div class="project-grid">
 
-      <a class="project-card fade-up" href="projects/supply-chain-optimization.html">
+      <a class="project-card reveal" data-reveal-card href="projects/supply-chain-optimization.html">
         <div class="card-image">
-          <img src="images/supply-chain/cover.jpg" alt="Supply Chain Optimization"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/supply-chain/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Supply Chain Optimization</h3>
-          <span class="year">2024</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Supply Chain Optimization</span>
+            <span class="year">2024</span>
+          </div>
+          <p class="card-desc">Multi-node network optimization using linear programming and simulation modeling.</p>
+          <div class="tag-row">
+            <span class="tag">Operations</span>
+            <span class="tag">Simulation</span>
+          </div>
         </div>
       </a>
 
-      <a class="project-card fade-up" href="projects/facility-layout.html" style="transition-delay: 0.08s;">
+      <a class="project-card reveal" data-reveal-card href="projects/facility-layout.html">
         <div class="card-image">
-          <img src="images/facility-layout/cover.jpg" alt="Facility Layout Redesign"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/facility-layout/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Facility Layout Redesign</h3>
-          <span class="year">2024</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Facility Layout Redesign</span>
+            <span class="year">2024</span>
+          </div>
+          <p class="card-desc">Systematic redesign to reduce material flow distance and improve overall throughput.</p>
+          <div class="tag-row">
+            <span class="tag">Facility Planning</span>
+            <span class="tag">Lean</span>
+          </div>
         </div>
       </a>
 
-      <a class="project-card fade-up" href="projects/human-factors.html" style="transition-delay: 0.16s;">
+      <a class="project-card reveal" data-reveal-card href="projects/human-factors.html">
         <div class="card-image">
-          <img src="images/human-factors/cover.jpg" alt="Human Factors Research"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/human-factors/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Human Factors Research</h3>
-          <span class="year">2023</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Human Factors Research</span>
+            <span class="year">2023</span>
+          </div>
+          <p class="card-desc">Ergonomic assessment and workstation redesign to reduce injury risk.</p>
+          <div class="tag-row">
+            <span class="tag">Human Factors</span>
+            <span class="tag">Research</span>
+          </div>
         </div>
       </a>
 
-      <a class="project-card fade-up" href="projects/process-improvement.html">
+      <a class="project-card reveal" data-reveal-card href="projects/process-improvement.html">
         <div class="card-image">
-          <img src="images/process-improvement/cover.jpg" alt="Process Improvement"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/process-improvement/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Process Improvement Initiative</h3>
-          <span class="year">2023</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Process Improvement</span>
+            <span class="year">2023</span>
+          </div>
+          <p class="card-desc">Applied lean principles to reduce cycle time and eliminate systemic process waste.</p>
+          <div class="tag-row">
+            <span class="tag">Lean</span>
+            <span class="tag">Six Sigma</span>
+          </div>
         </div>
       </a>
 
-      <a class="project-card fade-up" href="projects/simulation-model.html" style="transition-delay: 0.08s;">
+      <a class="project-card reveal" data-reveal-card href="projects/simulation-model.html">
         <div class="card-image">
-          <img src="images/simulation-model/cover.jpg" alt="Simulation Model"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/simulation-model/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Discrete-Event Simulation</h3>
-          <span class="year">2023</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Discrete-Event Simulation</span>
+            <span class="year">2023</span>
+          </div>
+          <p class="card-desc">Arena-based model to analyze and optimize manufacturing cell throughput.</p>
+          <div class="tag-row">
+            <span class="tag">Simulation</span>
+            <span class="tag">Arena</span>
+          </div>
         </div>
       </a>
 
-      <a class="project-card fade-up" href="projects/ergonomics-study.html" style="transition-delay: 0.16s;">
+      <a class="project-card reveal" data-reveal-card href="projects/ergonomics-study.html">
         <div class="card-image">
-          <img src="images/ergonomics-study/cover.jpg" alt="Ergonomics Study"
-               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-          <span class="placeholder-label">Project Image</span>
+          <img src="images/ergonomics-study/cover.jpg" alt="" onerror="this.style.display='none';">
         </div>
-        <div class="card-meta">
-          <h3>Ergonomics &amp; Workstation Study</h3>
-          <span class="year">2022</span>
+        <div class="card-body">
+          <div class="card-head">
+            <span class="title">Ergonomics &amp; Workstation Study</span>
+            <span class="year">2022</span>
+          </div>
+          <p class="card-desc">Workstation analysis evaluated against OSHA and NIOSH ergonomic standards.</p>
+          <div class="tag-row">
+            <span class="tag">Ergonomics</span>
+            <span class="tag">Analysis</span>
+          </div>
         </div>
       </a>
 
-    </div>
     </div>
   </section>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
+  <!-- ── About ── -->
+  <section id="about" class="about">
+    <div class="about-inner">
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+      <div class="reveal">
+        <div class="about-label">About</div>
+        <div class="about-avatar">
+          <img src="images/profile.jpg" alt="Logan Lessing" onerror="this.style.display='none';">
+          <svg viewBox="0 0 56 56" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="28" y="27" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="17" font-weight="700" fill="#c8a882">OU</text>
+            <line x1="12" y1="33" x2="44" y2="33" stroke="#c8a882" stroke-width="0.75" opacity=".45"></line>
+            <text x="28" y="42" text-anchor="middle" font-family="'Lato',Arial,sans-serif" font-size="5" font-weight="700" fill="#c8a882" letter-spacing="1.5" opacity=".8">OAKLAND UNIV.</text>
+          </svg>
+        </div>
+        <div class="about-name">Logan Lessing</div>
+        <div class="about-school">Oakland University</div>
+      </div>
 
-    // Parallax — rAF-throttled scroll handler
-    const decoEls = document.querySelectorAll('[data-speed]');
-    const parallaxBg = document.querySelector('.parallax-bg');
-    const projectsSection = document.querySelector('.projects-section');
-    let rafPending = false;
+      <div class="about-body reveal" data-reveal-delay="120">
+        <p>I started college studying electrical engineering at Michigan State, but Formula SAE shifted my perspective. Being part of the design and manufacturing process — seeing what it actually takes to go from a concept to a finished part — is what drew me toward Industrial and Systems Engineering at Oakland University, where I'm concentrating in engineering management and production systems.</p>
+        <p>On the technical side I work primarily in NX CAD/CAM, Fusion 360, and ANSYS for structural analysis, with some programming in C++ and JavaScript in the mix. I also spend a good amount of time finding ways to fold AI tools into real engineering and project workflows.</p>
+        <div class="about-links">
+          <a href="https://www.linkedin.com/in/logan-lessing-3ab7203a5" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:loganlessing@gmail.com">Email</a>
+          <a href="assets/resume.pdf">Resume ↓</a>
+        </div>
+      </div>
 
-    function runParallax() {
-      const scrolled = window.scrollY;
-      decoEls.forEach(el => {
-        el.style.transform = `translateY(${scrolled * parseFloat(el.dataset.speed)}px)`;
-      });
-      if (parallaxBg && projectsSection) {
-        const rect = projectsSection.getBoundingClientRect();
-        parallaxBg.style.transform = `translateY(${rect.top * 0.25}px)`;
-      }
-      rafPending = false;
-    }
+    </div>
+  </section>
 
-    window.addEventListener('scroll', () => {
-      if (!rafPending) {
-        rafPending = true;
-        requestAnimationFrame(runParallax);
-      }
-    }, { passive: true });
-
-    runParallax();
-  </script>
-
+  <script src="js/portfolio.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+# OS junk
+.DS_Store
+
+# Local editor / tooling
+.claude/
+
+# Design handoff bundle (reference only, not part of the site)
+design_handoff_portfolio/

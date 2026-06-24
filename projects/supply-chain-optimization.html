@@ -4,183 +4,144 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Supply Chain Optimization — Logan Lessing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="../index.html">Logan Lessing</a>
-    <div class="nav-links">
-      <a href="../index.html#projects">Projects</a>
-      <a href="../about.html">About</a>
-      <a href="../about.html#contact">Contact</a>
-    </div>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── Nav ── -->
+  <nav class="site-nav">
+    <a class="nav-back" href="../index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9 2L4 7l5 5" stroke="#1c1917" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>Portfolio</span>
+    </a>
+    <span class="nav-wordmark-right">Logan Lessing</span>
   </nav>
 
-  <article class="project-page">
+  <!-- ── Hero banner ── -->
+  <div class="project-hero">
+    <img src="../images/supply-chain/hero.jpg" alt="" onerror="this.style.display='none';">
+    <div class="overlay"></div>
+  </div>
 
-    <a class="back-link fade-up" href="../index.html">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M19 12H5M12 5l-7 7 7 7"/>
-      </svg>
-      All Projects
-    </a>
+  <!-- ── Content ── -->
+  <div class="project-content">
 
-    <!-- Title + Year -->
-    <header class="project-header fade-up" style="transition-delay: 0.06s;">
-<h1>Supply Chain Optimization</h1>
-      <p class="year">2024</p>
-    </header>
+    <div class="project-crumb">Independent Project</div>
 
-    <!-- Tools & Experience — immediately below title -->
-    <div class="tags fade-up" style="transition-delay: 0.08s;">
-      <span class="tag">Arena</span>
-      <span class="tag">Excel / VBA</span>
-      <span class="tag">Monte Carlo Simulation</span>
-      <span class="tag">Demand Analysis</span>
-      <span class="tag">Inventory Optimization</span>
-    </div>
-    <p class="experience-source">Independent Project</p>
+    <h1>Supply Chain<br><em>Optimization</em></h1>
 
-    <!-- Links to reports / GitHub / paper -->
-    <div class="project-links fade-up" style="transition-delay: 0.1s;">
-      <!-- Add real links when available -->
-      <a class="project-link" href="#" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-        Full Report
-      </a>
-      <a class="project-link" href="#" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.08-.74.08-.73.08-.73 1.2.08 1.83 1.23 1.83 1.23 1.06 1.82 2.78 1.3 3.46.99.1-.77.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.69.82.57C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
-      </a>
+    <div class="project-year">2024</div>
+
+    <div class="tool-badges">
+      <span class="tool-badge">Arena</span>
+      <span class="tool-badge">Excel / VBA</span>
+      <span class="tool-badge">Monte Carlo</span>
+      <span class="tool-badge">Demand Analysis</span>
+      <span class="tool-badge">Inventory Optimization</span>
     </div>
 
-    <!-- Cover image -->
-    <div class="project-image fade-up" style="transition-delay: 0.14s;">
-      <img src="../images/supply-chain/cover.jpg" alt="Supply Chain Optimization"
-           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-      <span class="placeholder-label">Cover image — add images/supply-chain/cover.jpg</span>
-    </div>
-
-    <hr class="divider" />
+    <div class="accent-rule"></div>
 
     <!-- Overview -->
-    <section class="project-section fade-up">
-      <h2>Overview</h2>
-      <p>
-        A regional distribution company was struggling with lead time variability and
-        excess inventory costs caused by misaligned ordering policies across their
-        supplier network. This project redesigned their replenishment strategy using
-        simulation modeling and demand analysis to reduce total cost while maintaining
-        service levels.
-      </p>
-    </section>
+    <div class="project-block reveal">
+      <div class="block-label">Overview</div>
+      <p class="block-lead">A regional distribution company was struggling with lead time variability and excess inventory costs caused by misaligned ordering policies across their supplier network. This project redesigned their replenishment strategy using simulation modeling and demand analysis to reduce total cost while maintaining service levels.</p>
+    </div>
 
-    <!-- Problem Statement -->
-    <section class="project-section fade-up">
-      <h3>Problem Statement</h3>
-      <p>
-        The lack of visibility between supply chain tiers was creating a classic bullwhip
-        effect — small fluctuations in retail demand were amplifying 3–4x by the time
-        orders reached Tier 2 suppliers. This drove up safety stock requirements and
-        created recurring stockouts on high-velocity SKUs.
-      </p>
-    </section>
+    <!-- Challenge -->
+    <div class="project-block reveal">
+      <div class="block-label">The Challenge</div>
+      <h2>Taming a bullwhip effect that was amplifying demand 3–4x across supplier tiers.</h2>
+      <p>The lack of visibility between supply chain tiers was creating a classic bullwhip effect — small fluctuations in retail demand were amplifying 3–4x by the time orders reached Tier 2 suppliers. This drove up safety stock requirements and created recurring stockouts on high-velocity SKUs.</p>
+    </div>
 
-    <!-- Design & Process -->
-    <section class="project-section fade-up">
-      <h3>Design &amp; Process</h3>
-      <p>
-        I started with an 18-month demand data audit, mapping variance patterns by
-        SKU category and supplier using <span class="tool-mention">Excel / VBA</span>. This confirmed the bullwhip effect and isolated
-        the two supplier relationships causing the most amplification.
-      </p>
+    <!-- Process -->
+    <div class="project-block reveal">
+      <div class="block-label">Process</div>
+      <div class="process-steps">
 
-      <div class="project-image fade-up">
-        <img src="../images/supply-chain/photo-1.jpg" alt="Demand variance analysis"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="placeholder-label">Add images/supply-chain/photo-1.jpg</span>
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Demand Data Audit</div>
+            <p>Started with an 18-month demand data audit, mapping variance patterns by SKU category and supplier using <strong>Excel / VBA</strong>. This confirmed the bullwhip effect and isolated the two supplier relationships causing the most amplification.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Simulation Modeling</div>
+            <p>Built a discrete-event simulation in <strong>Arena</strong> to test three alternative replenishment policies — periodic review, continuous review, and a hybrid vendor-managed inventory approach — stress-tested against historical demand with <strong>Monte Carlo</strong> sampling.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Policy Evaluation</div>
+            <p>Compared each policy on the cost-versus-service-level tradeoff and identified two structural bottleneck suppliers, recommending the hybrid VMI policy for rollout across the highest-velocity SKUs.</p>
+          </div>
+        </div>
+
       </div>
-      <p class="image-caption">Demand variance mapped across supplier tiers</p>
+    </div>
+  </div>
 
-      <p>
-        I then built a discrete-event simulation in <span class="tool-mention">Arena</span> to test three alternative
-        replenishment policies: periodic review, continuous review, and a hybrid
-        vendor-managed inventory approach. Scenarios ran against historical demand
-        distributions with <span class="tool-mention">Monte Carlo</span> sampling to stress-test edge cases.
-      </p>
-
-      <div class="project-image fade-up">
-        <img src="../images/supply-chain/photo-2.jpg" alt="Arena simulation model"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="placeholder-label">Add images/supply-chain/photo-2.jpg</span>
+  <!-- ── Gallery ── -->
+  <div class="gallery-wrap">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="../images/supply-chain/01.jpg" alt="" onerror="this.style.display='none';">
       </div>
-      <p class="image-caption">Arena simulation model showing material flow between supplier nodes</p>
-
-      <div class="project-image fade-up">
-        <img src="../images/supply-chain/diagram-1.png" alt="Policy comparison diagram"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <span class="placeholder-label">Add images/supply-chain/diagram-1.png</span>
+      <div class="gallery-item">
+        <img src="../images/supply-chain/02.jpg" alt="" onerror="this.style.display='none';">
       </div>
-      <p class="image-caption">Cost vs. service level tradeoff across three replenishment policies</p>
-    </section>
-
-    <!-- Results -->
-    <section class="project-section fade-up">
-      <h3>Results</h3>
-      <p>
-        The recommended hybrid VMI policy reduced average inventory holding cost by 22%
-        while improving on-time delivery from 87% to 94%. The simulation also identified
-        two structural bottleneck suppliers — flagged for renegotiation in the next
-        procurement cycle.
-      </p>
-      <p>
-        The client rolled out the new policy across their top 40 SKUs in Q3, with full
-        network implementation planned for the following year.
-      </p>
-    </section>
-
-    <!-- Demo video — uncomment and replace VIDEO_ID when available -->
-    <!--
-    <section class="project-section fade-up">
-      <h3>Demo</h3>
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/VIDEO_ID"
-          title="Supply Chain Optimization Demo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+      <div class="gallery-item">
+        <img src="../images/supply-chain/03.jpg" alt="" onerror="this.style.display='none';">
       </div>
-    </section>
-    -->
+      <div class="gallery-item wide">
+        <img src="../images/supply-chain/04.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+      <div class="gallery-item">
+        <img src="../images/supply-chain/05.jpg" alt="" onerror="this.style.display='none';">
+      </div>
+    </div>
+  </div>
 
-    <!-- Future Steps -->
-    <section class="project-section fade-up">
-      <h3>Future Steps</h3>
-      <p>
-        The next phase would integrate real-time POS data feeds into the replenishment
-        triggers, reducing the lag between retail demand signals and upstream ordering.
-        A machine learning demand forecasting layer would further reduce safety stock
-        requirements.
-      </p>
-    </section>
+  <!-- ── Results ── -->
+  <div class="results-wrap">
+    <div class="project-block reveal" style="margin-bottom:0;">
+      <div class="block-label">Results</div>
+      <h2>Cut average inventory holding cost by 22% while lifting on-time delivery from 87% to 94%.</h2>
+      <p>The recommended hybrid VMI policy reduced average inventory holding cost by 22% while improving on-time delivery from 87% to 94%. The simulation also identified two structural bottleneck suppliers — flagged for renegotiation in the next procurement cycle.</p>
+      <p>The client rolled out the new policy across their top 40 SKUs in Q3, with full network implementation planned for the following year. A future phase would integrate real-time POS feeds and a machine-learning demand-forecasting layer to further reduce safety stock.</p>
+    </div>
+  </div>
 
+  <!-- ── Footer / Next Project ── -->
+  <div class="project-footer">
+    <div class="project-footer-inner">
+      <a class="footer-back" href="../index.html">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M9 2L4 7l5 5" stroke="#c8a882" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <span>All Projects</span>
+      </a>
+      <div class="footer-next">
+        <div class="next-label">Next Project</div>
+        <a href="facility-layout.html">
+          Facility Layout Redesign
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
-  </article>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
-
+  <script src="../js/portfolio.js"></script>
 </body>
 </html>
